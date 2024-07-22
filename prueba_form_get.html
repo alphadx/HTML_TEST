@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documento HTML5 básico</title>
+</head>
+	<body>
+		<form action="" method="GET">
+			<input type="hidden" name="a" value="1" /> 
+			<input type="hidden" name="b" value="2" /> 
+			<input type="hidden" name="c" value="3" /> 
+			<input type="submit" value="Reset" /> 
+		</form>
+
+		<!-- ESTA OTRA PARTE LA HICE PARA PROBAR JAVASCRIPT CON EL GET, ASÍ LE PONÍA LÓGICA -->
+
+		<div id='check'></div>
+		<form action="" id="inputs" method="GET">
+			<input type="input" name="a" value="1" /> 
+			<input type="input" name="b" value="2" /> 
+			<input type="input" name="c" value="3" /> 
+			<input type="submit" /> 
+		</form>
+	</body>
+</html>
+<script>
+	const urlParams = new URLSearchParams(window.location.search);
+	const a = urlParams.get('a');
+	const b = urlParams.get('b');
+	const c = urlParams.get('c');
+
+	const input_a = document.querySelector("#inputs input[name='a']");
+	const input_b = document.querySelector("#inputs input[name='b']");
+	const input_c = document.querySelector("#inputs input[name='c']");
+
+
+	if (a > 5) {
+		var div = document.getElementById('check');
+		div.innerHTML = 'JAJAJA';
+		input_a.value = a;
+	}
+	if (b > 6) {
+		var div = document.getElementById('check');
+		div.innerHTML = 'JEJEJE';
+		input_b.value = b;
+	}
+	if (c > 7) {
+		var div = document.getElementById('check');
+		div.innerHTML = 'JIJIJI';
+		input_c.value = c;
+	}
+</script>
+
