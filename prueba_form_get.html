@@ -4,6 +4,35 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Documento HTML5 básico</title>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const urlParams = new URLSearchParams(window.location.search);
+			const a = urlParams.get('a');
+			const b = urlParams.get('b');
+			const c = urlParams.get('c');
+
+			const input_a = document.querySelector("#inputs input[name='a']");
+			const input_b = document.querySelector("#inputs input[name='b']");
+			const input_c = document.querySelector("#inputs input[name='c']");
+
+
+			if (a > 5) {
+				var div = document.getElementById('check');
+				div.innerHTML = 'JAJAJA';
+				input_a.value = a;
+			}
+			if (b > 6) {
+				var div = document.getElementById('check');
+				div.innerHTML = 'JEJEJE';
+				input_b.value = b;
+			}
+			if (c > 7) {
+				var div = document.getElementById('check');
+				div.innerHTML = 'JIJIJI';
+				input_c.value = c;
+			}
+		});
+	</script>
 </head>
 	<body>
 		<form action="" method="GET">
@@ -24,31 +53,5 @@
 		</form>
 	</body>
 </html>
-<script>
-	const urlParams = new URLSearchParams(window.location.search);
-	const a = urlParams.get('a');
-	const b = urlParams.get('b');
-	const c = urlParams.get('c');
 
-	const input_a = document.querySelector("#inputs input[name='a']");
-	const input_b = document.querySelector("#inputs input[name='b']");
-	const input_c = document.querySelector("#inputs input[name='c']");
-
-
-	if (a > 5) {
-		var div = document.getElementById('check');
-		div.innerHTML = 'JAJAJA';
-		input_a.value = a;
-	}
-	if (b > 6) {
-		var div = document.getElementById('check');
-		div.innerHTML = 'JEJEJE';
-		input_b.value = b;
-	}
-	if (c > 7) {
-		var div = document.getElementById('check');
-		div.innerHTML = 'JIJIJI';
-		input_c.value = c;
-	}
-</script>
 
